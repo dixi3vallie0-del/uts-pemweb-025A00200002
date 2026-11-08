@@ -1,14 +1,55 @@
 <?php
 declare(strict_types=1);
 
-// data.php - sumber data toko
+$namaSitus = "Perpustakaan Dinda";
 
-$namaToko = "Toko Kue Bu Sri";
-
-$daftarKue = [
-    ["nama" => "Bolu Pandan",    "harga" => 45000,  "stok" => 6],
-    ["nama" => "Brownies Kukus", "harga" => 50000,  "stok" => 0],
-    ["nama" => "Lapis Legit",    "harga" => 120000, "stok" => 2],
-    ["nama" => "Kue Sus",        "harga" => 3500,   "stok" => 40],
-    ["nama" => "Nastar",         "harga" => 85000,  "stok" => 10],
+$daftarItem = [
+    [
+        'judul' => 'Laskar Pelangi',
+        'penulis' => 'Andrea Hirata',
+        'tahun' => 2005,
+        'status_ketersediaan' => true,
+    ],
+    [
+        'judul' => 'Bumi Manusia',
+        'penulis' => 'Pramoedya Ananta Toer',
+        'tahun' => 1980,
+        'status_ketersediaan' => false,
+    ],
+    [
+        'judul' => 'Cantik Itu Luka',
+        'penulis' => 'Eka Kurniawan',
+        'tahun' => 2002,
+        'status_ketersediaan' => true,
+    ],
+    [
+        'judul' => 'Negeri 5 Menara',
+        'penulis' => 'Ahmad Fuadi',
+        'tahun' => 2009,
+        'status_ketersediaan' => true,
+    ],
+    [
+        'judul' => 'Pulang',
+        'penulis' => 'Leila S. Chudori',
+        'tahun' => 2012,
+        'status_ketersediaan' => false,
+    ],
+    [
+        'judul' => 'Ronggeng Dukuh Paruk',
+        'penulis' => 'Ahmad Tohari',
+        'tahun' => 1982,
+        'status_ketersediaan' => true,
+    ],
+    [
+        'judul' => 'Supernova: Ksatria, Puteri, dan Bintang Jatuh',
+        'penulis' => 'Dee Lestari',
+        'tahun' => 2001,
+        'status_ketersediaan' => false,
+    ],
+    [
+        'judul' => 'Ayat-Ayat Cinta',
+        'penulis' => 'Habiburrahman El Shirazy',
+        'tahun' => 2004,
+        'status_ketersediaan' => true,
+    ],
 ];

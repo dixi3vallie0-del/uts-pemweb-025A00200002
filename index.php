@@ -1,55 +1,42 @@
 <?php
 declare(strict_types=1);
 
-require __DIR__ . "/data.php";
-require __DIR__ . "/functions.php";
-
-$jumlahKue = count($daftarKue);
+require_once 'data.php';
+require_once 'functions.php';
 ?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= e($namaToko) ?></title>
+    <title><?= htmlspecialchars($namaSitus) ?></title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1><?= htmlspecialchars($namaSitus) ?></h1>
+    </header>
 
-<header class="wadah kepala">
-    <h1><?= e($namaToko) ?></h1>
-    <p>Kue rumahan, dibuat setiap pagi.</p>
-</header>
+    <main>
+        <section class="info-koleksi">
+            <p>Total koleksi buku: <strong><?= hitungTotalBuku($daftarItem) ?></strong></p>
+        </section>
 
-<main class="wadah">
-    <section>
-        <h2>Daftar Kue</h2>
-        <p>Tersedia <?= $jumlahKue ?> jenis kue.</p>
-
-        <div class="grid">
-            <?php foreach ($daftarKue as $kue): ?>
-                <?php
-                if ($kue["stok"] === 0) {
-                    $label = "Habis";
-                    $kelasLabel = "label label--habis";
-                } else {
-                    $label = "Tersedia";
-                    $kelasLabel = "label";
-                }
-                ?>
-                <article class="kartu">
-                    <h3><?= e($kue["nama"]) ?></h3>
-                    <p class="harga"><?= formatRupiah($kue["harga"]) ?></p>
-                    <p class="<?= $kelasLabel ?>"><?= $label ?></p>
+        <section class="daftar-buku">
+            <h2>Daftar Buku</h2>
+            <?php foreach ($daftarItem as $buku): ?>
+                <article class="buku">
+                    <h3><?= htmlspecialchars($buku['judul']) ?></h3>
+                    <p>Penulis: <?= htmlspecialchars($buku['penulis']) ?></p>
+                    <p>Tahun: <?= $buku['tahun'] ?></p>
+                    <p>Status: <?= tampilkanStatus($buku['status_ketersediaan']) ?></p>
                 </article>
             <?php endforeach; ?>
-        </div>
-    </section>
-</main>
+        </section>
+    </main>
 
-<footer class="wadah kaki">
-    <p>&copy; <?= date("Y") ?> <?= e($namaToko) ?></p>
-</footer>
-
+    <footer>
+        <p>&copy; <?= date('Y') ?> <?= htmlspecialchars($namaSitus) ?></p>
+    </footer>
 </body>
 </html>
