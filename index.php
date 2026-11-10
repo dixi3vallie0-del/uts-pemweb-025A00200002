@@ -33,6 +33,10 @@ require_once 'functions.php';
                 </article>
             <?php endforeach; ?>
         </section>
+        
+        <div class="nav-wrapper">
+            <a href="katalog.php" class="btn-navigasi">Lihat Katalog Buku &rarr;</a>
+        </div>
     </main>
 
     <footer>

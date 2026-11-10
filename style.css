@@ -149,6 +149,37 @@ footer {
     color: var(--text-muted);
 }
 
+/* Tombol Navigasi */
+.nav-wrapper {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.btn-navigasi {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(135deg, #f9c5d5, #f4a6bd);
+    color: #5a2a3a;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 999px;
+    box-shadow: 0 6px 18px rgba(240, 130, 160, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.btn-navigasi:hover {
+    background: linear-gradient(135deg, #f4a6bd, #ec8aa8);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 26px rgba(240, 130, 160, 0.4);
+}
+
+.btn-navigasi:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(240, 130, 160, 0.3);
+}
+
 /* Responsif */
 @media (max-width: 768px) {
     header {
